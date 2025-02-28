@@ -4,5 +4,12 @@
 <ul>
   <% @products.each do |product| %>
     <li><%= link_to product.title, product_path(product) %></li>
-  <% end %>
+    <h1><%= @product.title %></h1>
+    <p><%= @product.description %></p>
+    <p>Price: $<%= @product.price %></p>
+    <p>Stock: <%= @product.stock_quantity %></p>
+
+    <%= link_to "Back to Products", products_path %>
+
+    <% end %>
 </ul>
